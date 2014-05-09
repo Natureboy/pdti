@@ -1,0 +1,136 @@
+version: 1
+
+dn: o=dev2.provider-directories.com,dc=hpd
+objectClass: domain
+objectClass: top
+dc: dev2.provider-directories.com
+
+#==================================================
+# START: PROVIDER(S)
+#==================================================
+
+dn: ou=HcProfessional,o=dev2.provider-directories.com,dc=hpd
+objectClass: organizationalunit
+objectClass: top
+ou: HcProfessional
+
+dn: HcIdentifier=provider100,ou=HcProfessional,o=dev2.provider-directories.com,dc=hpd
+objectClass: top
+objectClass: person
+objectClass: organizationalperson
+objectClass: inetorgperson
+objectClass: naturalPerson
+objectClass: HCProfessional
+objectClass: HPDProvider
+HcIdentifier: provider100
+HcProfession: Doctor
+HcSpecialisation: Neurosurgeon
+cn: Albert Johnson
+description: This is the description for Albert Johnson.
+givenName: Albert
+sn: Johnson
+facsimileTelephoneNumber: +1 125 839 6432
+initials: AJ
+mail: albert.johnson@mail1.com
+mobile: +1 432 234 5653
+pager: +1 349 343 8432
+telephoneNumber: +1 125 839 6433
+hpdProviderLegalAddress: addr=532 Maple Drive,Austin, TX 78610
+hpdProviderMailingAddress: addr=532 Maple Drive,Austin, TX 78610
+hpdProviderBillingAddress: addr=532 Maple Drive,Austin, TX 78610
+hpdProviderPracticeAddress: addr=532 Maple Drive,Austin, TX 78610
+hpdProviderLanguageSupported: en
+uid: albert.johnson
+hpdCredential: hpdCredentialId=100,ou=Credentials,o=dev2.provider-directories.com,dc=hpd
+gender: m
+
+#==================================================
+# END: PROVIDER(S)
+#==================================================
+
+#==================================================
+# START: ORGANIZATION(S)
+#==================================================
+
+dn: ou=HcRegulatedOrganization,o=dev2.provider-directories.com,dc=hpd
+objectClass: organizationalunit
+objectClass: top
+ou: HcRegulatedOrganization
+
+dn: uid=org100,ou=HcRegulatedOrganization,o=dev2.provider-directories.com,dc=hpd
+objectClass: top
+objectClass: organization
+objectClass: HCRegulatedOrganization
+objectClass: HPDProvider
+HcIdentifier: org100
+o: Maple Neurosurgery Clinic
+hpdProviderMailingAddress: addr=532 Maple Drive,Austin, TX 78610
+uid: org100
+
+#==================================================
+# END: ORGANIZATION(S)
+#==================================================
+
+#==================================================
+# START: MEMBERSHIP(S)
+#==================================================
+
+dn: ou=Memberships,o=dev2.provider-directories.com,dc=hpd
+objectClass: organizationalunit
+objectClass: top
+ou: Memberships
+
+dn: hpdMemberId=100,ou=Memberships,o=dev2.provider-directories.com,dc=hpd
+objectClass: top
+objectClass: HPDProviderMembership
+hpdHasAnOrg: uid=org100,ou=HcRegulatedOrganization,o=dev2.provider-directories.com,dc=hpd
+hpdHasAProvider: HcIdentifier=provider100,ou=HcProfessional,o=dev2.provider-directories.com,dc=hpd
+hpdMemberId: 100
+hpdHasAService: hpdServiceId=100,ou=Services,o=dev2.provider-directories.com
+
+#==================================================
+# END: MEMBERSHIP(S)
+#==================================================
+
+#==================================================
+# START: SERVICE(S)
+#==================================================
+
+dn: ou=Services,o=dev2.provider-directories.com,dc=hpd
+objectClass: organizationalunit
+objectClass: top
+ou: Services
+
+dn: hpdServiceId=100,ou=Services,o=dev2.provider-directories.com,dc=hpd
+objectClass: top
+objectClass: HPDElectronicService
+hpdServiceAddress: http://caqh.org/SOAP/WSDL/CORERule2.2.0.wsdl
+hpdServiceId: 100
+hpdIntegrationProfile: CAQH CORE Connectivity Rule
+hpdContentProfile: CAQH CORE Phase I Operating Rules
+
+#==================================================
+# END: SERVICE(S)
+#==================================================
+
+#==================================================
+# START: CREDENTIAL(S)
+#==================================================
+
+dn: ou=Credentials,o=dev2.provider-directories.com,dc=hpd
+objectClass: organizationalunit
+objectClass: top
+ou: Credentials
+
+dn: hpdCredentialId=100,ou=Credentials,o=dev2.provider-directories.com,dc=hpd
+objectClass: top
+objectClass: HPDProviderCredential
+credentialName: Texas medical license
+credentialType: medicalLicense
+credentialNumber: 100
+hpdCredentialId: 100
+description: Albert Johnson's Texas medical license
+
+#==================================================
+# END: CREDENTIAL(S)
+#==================================================

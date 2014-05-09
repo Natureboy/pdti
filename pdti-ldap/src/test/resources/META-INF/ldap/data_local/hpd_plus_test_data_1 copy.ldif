@@ -1,0 +1,419 @@
+version: 1
+
+dn: o=dev.provider-directories.com,dc=hpd
+objectClass: domain
+objectClass: top
+dc: dev.provider-directories.com
+
+#==================================================
+# START: PROVIDER(S)
+#==================================================
+
+dn: ou=HcProfessional,o=dev.provider-directories.com,dc=hpd
+objectClass: organizationalunit
+objectClass: top
+ou: HcProfessional
+
+dn: uid=2.16.840.1.113883.3.4295:provider1,ou=HcProfessional,o=dev.provider-directories.com,dc=hpd
+objectClass: top
+objectClass: person
+objectClass: organizationalperson
+objectClass: inetorgperson
+objectClass: naturalPerson
+objectClass: HCProfessional
+objectClass: HPDProvider
+cn: Thomas Jones
+sn: Jones
+description: This is the description for Thomas Jones.
+telephoneNumber: +1 685 622 6202
+facsimileTelephoneNumber: +1 225 216 5900
+title: Dr.
+givenName: Thomas
+mail: thomas.jones@mail1.com
+mobile: +1 010 154 3228
+pager: +1 779 041 6341
+uid: uid=2.16.840.1.113883.3.4295:provider1
+initials: Albert
+gender: m
+HcIdentifier: 2.16.840.1.113883.4.6:npi:1111111111:Active
+HcProfession: OrthopedicSurgeon
+#HcRole: HL-7 code for role
+HcSpecialisation: 2.16.840.1.113883.6.101:NUCC:207X00000X:Orthopedic Surgery
+hpdCredential: hpdCredentialId=1,ou=Credentials,o=dev.provider-directories.com,dc=hpd
+hpdHasAService: hpdServiceId=6,ou=Services,o=dev.provider-directories.com,dc=hpd
+hpdProviderBillingAddress: addr=01251 Chestnut Street,Panama City, DE 50369
+hpdProviderLanguageSupported: en
+hpdProviderLegalAddress: addr=01251 Chestnut Street,Panama City, DE 50369
+hpdProviderMailingAddress: addr=01251 Chestnut Street,Panama City, DE 50369
+hpdProviderPracticeAddress: addr=01251 Chestnut Street,Panama City, DE 50369
+hpdProviderStatus: Active
+
+dn: uid=2.16.840.1.113883.3.4295:provider2,ou=HcProfessional,o=dev.provider-directories.com,dc=hpd
+objectClass: top
+objectClass: person
+objectClass: organizationalperson
+objectClass: inetorgperson
+objectClass: naturalPerson
+objectClass: HCProfessional
+objectClass: HPDProvider
+HcIdentifier: 2.16.840.1.113883.4.6:npi:1111111112:Active
+HcProfession: Ambulatory Surgeon.
+HcSpecialisation: 2.16.840.1.113883.6.101:NUCC:103TR0400X:Ambulatory Surgical
+cn: John Smith
+description: This is the description for John Smith.
+givenName: John
+sn: Smith
+facsimileTelephoneNumber: +1 225 216 5901
+initials: Mills
+title: Dr.
+mail: john.smith@mail2.com
+mobile: +1 010 154 3228
+pager: +1 779 041 6341
+telephoneNumber: +1 685 622 6202
+hpdProviderLegalAddress: addr=01251 Wallnut Street,Panama City, DE 50371
+hpdProviderMailingAddress: addr=01251 Wallnut Street,Panama City, DE 50371
+hpdProviderBillingAddress: addr=01251 Wallnut Street,Panama City, DE 50371
+hpdProviderPracticeAddress: addr=01251 Wallnut Street,Panama City, DE 50371
+hpdProviderLanguageSupported: en
+uid: 2.16.840.1.113883.3.4295:provider2
+hpdHasAService: hpdServiceId=6,ou=Services,o=dev.provider-directories.com,dc=hpd
+gender: m
+
+dn: uid=2.16.840.1.113883.3.4295:provider3,ou=HcProfessional,o=dev.provider-directories.com,dc=hpd
+objectClass: top
+objectClass: person
+objectClass: organizationalperson
+objectClass: inetorgperson
+objectClass: naturalPerson
+objectClass: HCProfessional
+objectClass: HPDProvider
+HcIdentifier: 2.16.840.1.113883.4.6:npi:1111111113:Active
+HcProfession: Gynecologist
+HcSpecialisation: 2.16.840.1.113883.6.101:NUCC:111NX0800X:Obstetrics and Gynecology
+cn: Bob Jefferson
+description: This is the description for Bob Jefferson.
+givenName: Bob
+sn: Jefferson
+facsimileTelephoneNumber: +1 225 216 5900
+initials: John
+title: Dr.
+mail: bob.jefferson@mail3.com
+mobile: +1 010 154 3228
+pager: +1 779 041 6341
+telephoneNumber: +1 685 622 6201
+hpdProviderLegalAddress: addr=123 Oak Street,Panama City, DE 50371
+hpdProviderMailingAddress: addr=123 Oak Street,Panama City, DE 50371
+hpdProviderBillingAddress: addr=123 Oak Street,Panama City, DE 50371
+hpdProviderPracticeAddress: addr=123 Oak Street,Panama City, DE 50371
+uid: 2.16.840.1.113883.3.4295:provider3
+gender: m
+
+#==================================================
+# END: PROVIDER(S)
+#==================================================
+
+#==================================================
+# START: ORGANIZATION(S)
+#==================================================
+
+dn: ou=HcRegulatedOrganization,o=dev.provider-directories.com,dc=hpd
+objectClass: organizationalunit
+objectClass: top
+ou: HcRegulatedOrganization
+
+dn: uid=2.16.840.1.113883.3.4295:org1,ou=HcRegulatedOrganization,o=dev.provider-directories.com,dc=hpd
+objectClass: top
+objectClass: organization
+objectClass: HcRegulatedOrganization
+objectClass: HPDProvider
+o: Dr. Thomas Jones' Private Practice
+businessCategory: MRI
+description: Performs magnetic resonance imaging
+facsimileTelephoneNumber: +1 123 456 7899
+telephoneNumber: +1 123 456 7890
+HcIdentifier: 2.16.840.1.113883.3.4295:LocalId:1111111:Active
+uid: 2.16.840.1.113883.3.4295:org1
+ClinicalInformationContact: uid=2.16.840.1.113883.3.4295:provider1,ou=HcProfessional,o=dev.provider-directories.com,dc=hpd
+HcRegisteredName: Dr. Thomas Jones' Private Practice
+HcSpecialisation: 2.16.840.1.113883.6.101:NUCC:207X00000X:Orthopedic Surgery
+hpdCredential: hpdCredentialId=2,ou=Credentials,o=dev.provider-directories.com,dc=hpd
+hpdHasAService: hpdServiceId=4,ou=Services,o=dev.provider-directories.com,dc=hpd
+hpdProviderBillingAddress: addr=01251 Chestnut Street,Panama City, DE 50369
+hpdProviderLanguageSupported: en
+hpdProviderLegalAddress: addr=01251 Chestnut Street,Panama City, DE 50369
+hpdProviderMailingAddress: addr=01251 Chestnut Street,Panama City, DE 50369
+hpdProviderPracticeAddress: addr=01251 Chestnut Street,Panama City, DE 50369
+hpdProviderStatus: Active
+
+dn: uid=2.16.840.1.113883.3.4295:org2,ou=HcRegulatedOrganization,o=dev.provider-directories.com,dc=hpd
+objectClass: top
+objectClass: organization
+objectClass: HcRegulatedOrganization
+objectClass: HPDProvider
+HcIdentifier: 2.16.840.1.113883.3.4295:LocalId:1111112:Active
+o: Panama City Clinic
+hpdProviderMailingAddress: addr=01251 Wallnut Street,Panama City, DE 50371
+uid: 2.16.840.1.113883.3.4295:org2
+
+dn: uid=2.16.840.1.113883.3.4295:org4,ou=HcRegulatedOrganization,o=dev.provider-directories.com,dc=hpd
+objectClass: top
+objectClass: organization
+objectClass: HcRegulatedOrganization
+objectClass: HPDProvider
+HcIdentifier: 2.16.840.1.113883.3.4295:LocalId:1111114:Active
+o: Northside Hospital Maternity Unit
+hpdProviderMailingAddress: addr=123 Peachtree Street,Atlanta, GA 30032
+uid: 2.16.840.1.113883.3.4295:org4
+businessCategory: Maternity
+description: Maternity care unit at Northside Hospital
+facsimileTelephoneNumber: +1 123 456 7890
+telephoneNumber: +1 123 456 7890
+HcRegisteredName: Northside Hospital Maternity Care
+ClinicalInformationContact: uid=2.16.840.1.113883.3.4295:provider1,ou=HcProfessional,o=dev.provider-directories.com,dc=hpd
+HcSpecialisation: 2.16.840.1.113883.6.101:NUCC:103TR0400X:Ambulatory Surgical
+hpdProviderStatus: Active
+hpdProviderLanguageSupported: en sp jpn
+hpdProviderBillingAddress: addr=123 Peachtree Street,Atlanta, GA 30032
+hpdProviderPracticeAddress: addr=123 Peachtree Street,Atlanta, GA 30032
+hpdProviderLegalAddress: addr=123 Peachtree Street,Atlanta, GA 30032
+
+dn: uid=2.16.840.1.113883.3.4295:org5,ou=HcRegulatedOrganization,o=dev.provider-directories.com,dc=hpd
+objectClass: top
+objectClass: organization
+objectClass: HcRegulatedOrganization
+objectClass: HPDProvider
+HcIdentifier: 2.16.840.1.113883.3.4295:LocalId:1111115:Active
+o: Northside Hospital
+hpdProviderMailingAddress: addr=123 Peachtree Street,Atlanta, GA 30032
+uid: 2.16.840.1.113883.3.4295:org5
+businessCategory: Hospital
+description: Hospital
+facsimileTelephoneNumber: +1 123 456 7890
+telephoneNumber: +1 123 456 7890
+HcRegisteredName: Northside Hospital of Georgia
+ClinicalInformationContact: uid=2.16.840.1.113883.3.4295:provider1,ou=HcProfessional,o=dev.provider-directories.com,dc=hpd
+HcSpecialisation: 2.16.840.1.113883.6.101:NUCC:111NX0800X:Obstetrics and Gynecology
+hpdProviderStatus: Active
+hpdProviderLanguageSupported: en sp jpn
+hpdProviderBillingAddress: addr=123 Peachtree Street,Atlanta, GA 30032
+hpdProviderPracticeAddress: addr=123 Peachtree Street,Atlanta, GA 30032
+hpdProviderLegalAddress: addr=123 Peachtree Street,Atlanta, GA 30032
+hpdHasAService: hpdServiceId=4,ou=Services,o=dev.provider-directories.com,dc=hpd
+hpdCredential: hpdCredentialId=2,ou=Credentials,o=dev.provider-directories.com,dc=hpd
+
+#==================================================
+# END: ORGANIZATION(S)
+#==================================================
+
+#==================================================
+# START: MEMBERSHIP(S)
+#==================================================
+
+dn: ou=Memberships,o=dev.provider-directories.com,dc=hpd
+objectClass: organizationalunit
+objectClass: top
+ou: Memberships
+
+dn: hpdMemberId=1,ou=Memberships,o=dev.provider-directories.com,dc=hpd
+objectClass: top
+objectClass: HPDProviderMembership
+hpdHasAnOrg: uid=2.16.840.1.113883.3.4295:org1,ou=HcRegulatedOrganization,o=dev.provider-directories.com,dc=hpd
+hpdMemberId: 1
+hpdHasAService: hpdServiceId=1,ou=Services,o=dev.provider-directories.com,dc=hpd^hpdServiceId=2,ou=Services,o=dev.provider-directories.com,dc=hpd^hpdServiceId=3,ou=Services,o=dev.provider-directories.com,dc=hpd
+hpdHasAProvider: uid=2.16.840.1.113883.3.4295:provider1,ou=HcProfessional,o=dev.provider-directories.com,dc=hpd
+#hpdHasASubOrg: should only have hpdHasAProvider OR hpdHasASubOrg. See membership hpdMemberId=5 for an example that does contain this attribute.
+mail: hpdmemberid1@direct.direct.org
+mobile: +1 123 456 7890
+pager: +1 123 456 7890
+telephoneNumber: +1 123 456 7890
+facsimileTelephoneNumber: +1 123 456 7890
+
+dn: hpdMemberId=2,ou=Memberships,o=dev.provider-directories.com,dc=hpd
+objectClass: top
+objectClass: HPDProviderMembership
+hpdHasAnOrg: uid=2.16.840.1.113883.3.4295:org2,ou=HcRegulatedOrganization,o=dev.provider-directories.com,dc=hpd
+hpdHasAProvider: uid=2.16.840.1.113883.3.4295:provider2,ou=HcProfessional,o=dev.provider-directories.com,dc=hpd
+hpdMemberId: 2
+
+dn: hpdMemberId=3,ou=Memberships,o=dev.provider-directories.com,dc=hpd
+objectClass: top
+objectClass: HPDProviderMembership
+hpdHasAnOrg: uid=2.16.840.1.113883.3.4295:org2,ou=HcRegulatedOrganization,o=dev.provider-directories.com,dc=hpd
+hpdHasAProvider: uid=2.16.840.1.113883.3.4295:provider3,ou=HcProfessional,o=dev.provider-directories.com,dc=hpd
+hpdMemberId: 3
+
+dn: hpdMemberId=4,ou=Memberships,o=dev.provider-directories.com,dc=hpd
+objectClass: top
+objectClass: HPDProviderMembership
+hpdHasAnOrg: uid=2.16.840.1.113883.3.4295:org5,ou=HcRegulatedOrganization,o=dev.provider-directories.com,dc=hpd
+#hpdHasASubOrg: hpdOrgId=org4,ou=HcRegulatedOrganization,o=dev.provider-directories.com,dc=hpd
+hpdMemberId: 4
+
+dn: hpdMemberId=5,ou=Memberships,o=dev.provider-directories.com,dc=hpd
+objectClass: top
+objectClass: HPDProviderMembership
+hpdHasAnOrg: uid=2.16.840.1.113883.3.4295:org4,ou=HcRegulatedOrganization,o=dev.provider-directories.com,dc=hpd
+hpdHasAProvider: uid=2.16.840.1.113883.3.4295:provider3,ou=HcProfessional,o=dev.provider-directories.com,dc=hpd
+hpdHasAService: hpdServiceId=5,ou=Services,o=dev.provider-directories.com,dc=hpd^hpdServiceId=2,ou=Services,o=dev.provider-directories.com,dc=hpd^hpdServiceId=3,ou=Services,o=dev.provider-directories.com,dc=hpd
+hpdMemberId: 5
+
+#==================================================
+# END: MEMBERSHIP(S)
+#==================================================
+
+#==================================================
+# START: SERVICE(S)
+#==================================================
+
+dn: ou=Services,o=dev.provider-directories.com,dc=hpd
+objectClass: organizationalunit
+objectClass: top
+ou: Services
+
+dn: hpdServiceId=1,ou=Services,o=dev.provider-directories.com,dc=hpd
+objectClass: top
+objectClass: HPDElectronicService
+hpdServiceAddress: thomas.jones@direct.service1.com
+hpdServiceId: 1
+hpdCertificate: MIICqjCCAZKgAwIBAgIJAMd5Vfs3Eo6kMA0GCSqGSIb3DQEBBQUAMA0xCzAJBgNV
+ BAMTAm1rMB4XDTEzMDUwMjE0MzMyNVoXDTIzMDQzMDE0MzMyNVowDTELMAkGA1UE
+ AxMCbWswggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDGHnk7g0gS4JmD
+ s1mNjsHFFEMuHmTtIvIPWbjsnbZRcy4teJE4D5/EShMQiOaujNO1mg6ib4hnEXPQ
+ 9q1sQhFg/5lC0Xwq3LGy7t9NlmRjrNKxejCYE04QptAK5vGg8dK3jcsfMEmHHxoo
+ nx38HpC24PvTJgY+efwBxTDQrZu3rMw2Jr/QERT6pbQEZbpsr0+ZizLv2C/mweE6
+ 2pGcKCA2WEffetL+qtoN3RWWagxSYx/jjJdT6UGn3KLEhoNSVm6LidmbKx4AwAys
+ YjfOPF8m06pF0khTlXMLyw6LyKwUYMpHSRmmlA6tyjUAsF9Cy+hY4VLPWXaNK6ru
+ zH+s5BBHAgMBAAGjDTALMAkGA1UdEwQCMAAwDQYJKoZIhvcNAQEFBQADggEBABPF
+ 45byPxZ9z78YBPE6IbYkxuY1dEt05ZP5YsKS76M7m9OYUryaPcWvt1ctdV2oJbJ+
+ 9vEVwDOKxD6gkLd1oIsw2nD9U3YYtHrcej2ytw3XcA+okzUoNVPblGTUSF7dMuc3
+ MyQPhnIt6iOZKuzRDG1Ruk4XHyXHc1sngsHp/THKsCjz+rZlgjlX4iatPAhz30Fn
+ BVZ7UVeAKftcDwpBdggJxvEAoEGvRpm7X8OlqQI2jmm/Oxlw70mjCZTzJFtOFOJf
+ homCEiQXSz/4tobOgw66ooBNWUd7f5MfAhquBV2/kDK5bnbOGJ30vzHBj9CUf8tT
+ flVoSO0cwbuGBddusEU=
+hpdIntegrationProfile: DirectProjectSMTP
+hpdContentProfile: PDF
+
+dn: hpdServiceId=2,ou=Services,o=dev.provider-directories.com,dc=hpd
+objectClass: top
+objectClass: HPDElectronicService
+hpdServiceAddress: https://service2.com:8181/DocumentRegistry_Service/DocumentRegistry
+hpdServiceId: 2
+hpdIntegrationProfile: SOAP
+hpdContentProfile: XDS:DocumentRegistry:Provide&Register
+
+dn: hpdServiceId=3,ou=Services,o=dev.provider-directories.com,dc=hpd
+objectClass: top
+objectClass: HPDElectronicService
+hpdServiceAddress: 67.59.166.230:5000
+hpdServiceId: 3
+hpdIntegrationProfile: MLLP HL7 V2.5
+hpdContentProfile: S&ILRIORURO1
+
+dn: hpdServiceId=4,ou=Services,o=dev.provider-directories.com,dc=hpd
+objectClass: top
+objectClass: HPDElectronicService
+hpdServiceAddress: thomas.jones@direct.service1.com
+hpdServiceId: 4
+hpdCertificate: MIICqjCCAZKgAwIBAgIJAMd5Vfs3Eo6kMA0GCSqGSIb3DQEBBQUAMA0xCzAJBgNV
+ BAMTAm1rMB4XDTEzMDUwMjE0MzMyNVoXDTIzMDQzMDE0MzMyNVowDTELMAkGA1UE
+ AxMCbWswggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDGHnk7g0gS4JmD
+ s1mNjsHFFEMuHmTtIvIPWbjsnbZRcy4teJE4D5/EShMQiOaujNO1mg6ib4hnEXPQ
+ 9q1sQhFg/5lC0Xwq3LGy7t9NlmRjrNKxejCYE04QptAK5vGg8dK3jcsfMEmHHxoo
+ nx38HpC24PvTJgY+efwBxTDQrZu3rMw2Jr/QERT6pbQEZbpsr0+ZizLv2C/mweE6
+ 2pGcKCA2WEffetL+qtoN3RWWagxSYx/jjJdT6UGn3KLEhoNSVm6LidmbKx4AwAys
+ YjfOPF8m06pF0khTlXMLyw6LyKwUYMpHSRmmlA6tyjUAsF9Cy+hY4VLPWXaNK6ru
+ zH+s5BBHAgMBAAGjDTALMAkGA1UdEwQCMAAwDQYJKoZIhvcNAQEFBQADggEBABPF
+ 45byPxZ9z78YBPE6IbYkxuY1dEt05ZP5YsKS76M7m9OYUryaPcWvt1ctdV2oJbJ+
+ 9vEVwDOKxD6gkLd1oIsw2nD9U3YYtHrcej2ytw3XcA+okzUoNVPblGTUSF7dMuc3
+ MyQPhnIt6iOZKuzRDG1Ruk4XHyXHc1sngsHp/THKsCjz+rZlgjlX4iatPAhz30Fn
+ BVZ7UVeAKftcDwpBdggJxvEAoEGvRpm7X8OlqQI2jmm/Oxlw70mjCZTzJFtOFOJf
+ homCEiQXSz/4tobOgw66ooBNWUd7f5MfAhquBV2/kDK5bnbOGJ30vzHBj9CUf8tT
+ flVoSO0cwbuGBddusEU=
+hpdIntegrationProfile: DirectProjectSMTP
+hpdContentProfile: C32
+
+dn: hpdServiceId=5,ou=Services,o=dev.provider-directories.com,dc=hpd
+objectClass: top
+objectClass: HPDElectronicService
+hpdServiceAddress: bob.jefferson@direct.northside.maternity.com
+hpdServiceId: 5
+hpdCertificate: MIICqjCCAZKgAwIBAgIJAMd5Vfs3Eo6kMA0GCSqGSIb3DQEBBQUAMA0xCzAJBgNV
+ BAMTAm1rMB4XDTEzMDUwMjE0MzMyNVoXDTIzMDQzMDE0MzMyNVowDTELMAkGA1UE
+ AxMCbWswggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDGHnk7g0gS4JmD
+ s1mNjsHFFEMuHmTtIvIPWbjsnbZRcy4teJE4D5/EShMQiOaujNO1mg6ib4hnEXPQ
+ 9q1sQhFg/5lC0Xwq3LGy7t9NlmRjrNKxejCYE04QptAK5vGg8dK3jcsfMEmHHxoo
+ nx38HpC24PvTJgY+efwBxTDQrZu3rMw2Jr/QERT6pbQEZbpsr0+ZizLv2C/mweE6
+ 2pGcKCA2WEffetL+qtoN3RWWagxSYx/jjJdT6UGn3KLEhoNSVm6LidmbKx4AwAys
+ YjfOPF8m06pF0khTlXMLyw6LyKwUYMpHSRmmlA6tyjUAsF9Cy+hY4VLPWXaNK6ru
+ zH+s5BBHAgMBAAGjDTALMAkGA1UdEwQCMAAwDQYJKoZIhvcNAQEFBQADggEBABPF
+ 45byPxZ9z78YBPE6IbYkxuY1dEt05ZP5YsKS76M7m9OYUryaPcWvt1ctdV2oJbJ+
+ 9vEVwDOKxD6gkLd1oIsw2nD9U3YYtHrcej2ytw3XcA+okzUoNVPblGTUSF7dMuc3
+ MyQPhnIt6iOZKuzRDG1Ruk4XHyXHc1sngsHp/THKsCjz+rZlgjlX4iatPAhz30Fn
+ BVZ7UVeAKftcDwpBdggJxvEAoEGvRpm7X8OlqQI2jmm/Oxlw70mjCZTzJFtOFOJf
+ homCEiQXSz/4tobOgw66ooBNWUd7f5MfAhquBV2/kDK5bnbOGJ30vzHBj9CUf8tT
+ flVoSO0cwbuGBddusEU=
+hpdIntegrationProfile: DirectProjectSMTP
+hpdContentProfile: C64
+
+dn: hpdServiceId=6,ou=Services,o=dev.provider-directories.com,dc=hpd
+objectClass: top
+objectClass: HPDElectronicService
+hpdServiceAddress: john.smith@direct.panama_city_clinic.com
+hpdServiceId: 6
+hpdCertificate: MIICqjCCAZKgAwIBAgIJAMd5Vfs3Eo6kMA0GCSqGSIb3DQEBBQUAMA0xCzAJBgNV
+ BAMTAm1rMB4XDTEzMDUwMjE0MzMyNVoXDTIzMDQzMDE0MzMyNVowDTELMAkGA1UE
+ AxMCbWswggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDGHnk7g0gS4JmD
+ s1mNjsHFFEMuHmTtIvIPWbjsnbZRcy4teJE4D5/EShMQiOaujNO1mg6ib4hnEXPQ
+ 9q1sQhFg/5lC0Xwq3LGy7t9NlmRjrNKxejCYE04QptAK5vGg8dK3jcsfMEmHHxoo
+ nx38HpC24PvTJgY+efwBxTDQrZu3rMw2Jr/QERT6pbQEZbpsr0+ZizLv2C/mweE6
+ 2pGcKCA2WEffetL+qtoN3RWWagxSYx/jjJdT6UGn3KLEhoNSVm6LidmbKx4AwAys
+ YjfOPF8m06pF0khTlXMLyw6LyKwUYMpHSRmmlA6tyjUAsF9Cy+hY4VLPWXaNK6ru
+ zH+s5BBHAgMBAAGjDTALMAkGA1UdEwQCMAAwDQYJKoZIhvcNAQEFBQADggEBABPF
+ 45byPxZ9z78YBPE6IbYkxuY1dEt05ZP5YsKS76M7m9OYUryaPcWvt1ctdV2oJbJ+
+ 9vEVwDOKxD6gkLd1oIsw2nD9U3YYtHrcej2ytw3XcA+okzUoNVPblGTUSF7dMuc3
+ MyQPhnIt6iOZKuzRDG1Ruk4XHyXHc1sngsHp/THKsCjz+rZlgjlX4iatPAhz30Fn
+ BVZ7UVeAKftcDwpBdggJxvEAoEGvRpm7X8OlqQI2jmm/Oxlw70mjCZTzJFtOFOJf
+ homCEiQXSz/4tobOgw66ooBNWUd7f5MfAhquBV2/kDK5bnbOGJ30vzHBj9CUf8tT
+ flVoSO0cwbuGBddusEU=
+hpdIntegrationProfile: DirectProjectSMTP
+hpdContentProfile: C64
+
+#==================================================
+# END: SERVICE(S)
+#==================================================
+
+#==================================================
+# START: CREDENTIAL(S)
+#==================================================
+
+dn: ou=Credentials,o=dev.provider-directories.com,dc=hpd
+objectClass: organizationalunit
+objectClass: top
+ou: Credentials
+
+dn: hpdCredentialId=1,ou=Credentials,o=dev.provider-directories.com,dc=hpd
+objectClass: top
+objectClass: HPDProviderCredential
+credentialName: Delaware medical license
+credentialType: medicalLicense
+credentialNumber: 1
+hpdCredentialId: 1
+description: Thomas Jones' Delaware medical license
+
+dn: hpdCredentialId=2,ou=Credentials,o=dev.provider-directories.com,dc=hpd
+objectClass: top
+objectClass: HPDProviderCredential
+hpdCredentialId: 2
+credentialName: Delaware organizational facility credential
+credentialNumber: 2
+credentialType: credential
+description: Thomas Jones' organizational credential
+credentialIssueDate: 19851106210627.3-0500
+credentialRenewalDate: 19921106210627.3-0500
+credentialStatus: Active
+hpdHasAnOrg: uid=2.16.840.1.113883.3.4295:org1,ou=HcRegulatedOrganization,o=dev.provider-directories.com,dc=hpd
+hpdHasAProvider: uid=2.16.840.1.113883.3.4295:provider3,ou=HcProfessional,o=dev.provider-directories.com,dc=hpd
+
+#==================================================
+# END: CREDENTIAL(S)
+#==================================================

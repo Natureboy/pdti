@@ -205,6 +205,27 @@ m-name: hpdCertificate
 m-singlevalue: FALSE
 m-syntax: 1.3.6.1.4.1.1466.115.121.1.5
 
+dn: m-oid=1.2.840.113549.1.9.25.33, ou=attributetypes, cn=hpd, ou=schema
+objectclass: metaTop
+objectclass: metaAttributeType
+objectclass: top
+m-oid: 1.2.840.113549.1.9.25.33
+m-description: Verizon test - public certificate from connectathon. As public_key.der
+m-length: 0
+m-name: vCertificate
+m-sinlevalue: FALSE
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.5
+
+dn: m-oid=1.2.840.113549.1.9.25.34, ou=attributetypes, cn=hpd, ou=schema
+objectclass: metaTop
+objectclass: metaAttributeType
+m-oid: 1.2.840.113549.1.9.25.34
+m-description: Verizon test - private certificate from connectathon (encrytpion),As private_key.der
+m-length: 0
+m-name: vPrivateCertificate
+m-singlevalue: FALSE
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.5
+
 dn: m-oid=1.3.6.1.4.1.19376.1.2.4.1.10,ou=attributeTypes,cn=hpd,ou=schema
 objectclass: metaTop
 objectclass: metaAttributeType
